@@ -8,15 +8,23 @@ export default function Home() {
     <div className="min-h-screen bg-[#0e0e1f] flex flex-col overflow-x-hidden">
       {/* Navigation */}
       <nav className="w-full px-4 sm:px-8 py-4 sm:py-5 flex items-center justify-between shrink-0">
-        <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center shadow-lg shadow-blue-900/40">
-            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+        {/* MORE MONEY Logo */}
+        <div className="flex items-center gap-3">
+          {/* M icon — upward trending arrows */}
+          <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Left arrow chevron */}
+            <polyline points="2,22 9,10 16,18" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+            {/* Right arrow chevron */}
+            <polyline points="16,18 23,6 30,14" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+            {/* Arrow tip */}
+            <polyline points="26,6 30,6 30,10" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+          </svg>
+          {/* MORE plain text */}
+          <span className="text-white font-bold text-xl tracking-widest">MORE</span>
+          {/* MONEY in rectangle box */}
+          <div className="border-2 border-white px-2.5 py-0.5">
+            <span className="text-white font-bold text-xl tracking-widest">MONEY</span>
           </div>
-          <span className="text-white font-bold text-lg tracking-wide">
-            LEAD<span className="text-blue-400">CAPTURE</span>
-          </span>
         </div>
 
         {/* Desktop nav */}

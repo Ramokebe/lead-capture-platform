@@ -18,10 +18,7 @@ export async function POST(request: NextRequest) {
   if (!allowed) {
     return NextResponse.json(
       { success: false, error: "Too many submissions. Please try again later." },
-      {
-        status: 429,
-        headers: { "Retry-After": String(retryAfter) },
-      }
+      { status: 429, headers: { "Retry-After": String(retryAfter) } }
     );
   }
 
@@ -39,6 +36,7 @@ export async function POST(request: NextRequest) {
   // 4. Sanitise string inputs
   if (body.firstName) body.firstName = sanitiseString(body.firstName);
   if (body.surname) body.surname = sanitiseString(body.surname);
+  if (body.cellphoneNumber) body.cellphoneNumber = sanitiseString(body.cellphoneNumber);
   if (body.utmSource) body.utmSource = sanitiseString(body.utmSource);
   if (body.utmCampaign) body.utmCampaign = sanitiseString(body.utmCampaign);
 
@@ -84,7 +82,12 @@ export async function POST(request: NextRequest) {
       .insert({
         first_name: data.firstName,
         surname: data.surname,
+        cellphone_number: data.cellphoneNumber,
         id_number: encryptedId,
+        offer_type: data.offerType,
+        loan_amount_range: data.loanAmountRange || null,
+        total_debt_amount: data.totalDebtAmount || null,
+        monthly_installments: data.monthlyInstallments || null,
         monthly_income: data.monthlyIncome,
         consent_given: data.consentGiven,
         ip_address: ip === "unknown" ? null : ip,
@@ -103,7 +106,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Return first 8 chars of UUID as reference
     const reference = lead.id.substring(0, 8).toUpperCase();
     return NextResponse.json({ success: true, reference }, { status: 201 });
   } catch (err) {
