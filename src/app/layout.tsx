@@ -7,9 +7,9 @@ import GTMNoScript from "@/components/analytics/GTMNoScript";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Check What You Qualify For | Apply Now",
+  title: "My Money Hub | Find Out What You Qualify For",
   description:
-    "Find out what financial products you qualify for in minutes. Secure, fast, and POPIA compliant.",
+    "My Money Hub connects you with personal loans, debt counselling, store cards and insurance. Real financial solutions — no guesswork, no pressure.",
   robots: { index: false, follow: false },
 };
 

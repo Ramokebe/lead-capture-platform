@@ -18,7 +18,7 @@ export default function SuccessPage({
 
         <h1 className="text-2xl font-bold text-white mb-2">Application Submitted!</h1>
         <p className="text-gray-400 text-sm mb-8">
-          Thank you for your submission. We have received your details and will be in touch soon.
+          Thank you for choosing <span className="text-white font-semibold">My Money Hub</span>. We have received your details and will be in touch soon.
         </p>
 
         {reference && (
