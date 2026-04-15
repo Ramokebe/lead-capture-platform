@@ -9,7 +9,7 @@ export const OFFER_TYPES = [
 ] as const;
 
 export const LOAN_AMOUNT_RANGES = [
-  { value: "R350 - R8,000", label: "R350 - R8,000" },
+  { value: "R500 - R8,000", label: "R500 - R8,000" },
   { value: "R8,001 - R50,000", label: "R8,001 - R50,000" },
   { value: "R50,001 - R350,000", label: "R50,001 - R350,000" },
 ] as const;
