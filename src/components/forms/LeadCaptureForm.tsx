@@ -14,9 +14,9 @@ import { extractUTMParams } from "@/lib/utm";
 import { pushToDataLayer } from "@/lib/gtm";
 
 const inputClass =
-  "w-full px-5 py-3.5 rounded-full bg-white text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all";
+  "w-full px-5 py-3.5 rounded-full bg-white text-gray-900 placeholder-gray-400 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all";
 const selectClass =
-  "w-full px-5 py-3.5 rounded-full bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all appearance-none cursor-pointer";
+  "w-full px-5 py-3.5 rounded-full bg-white text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all appearance-none cursor-pointer";
 const errorClass = "mt-1.5 ml-4 text-xs text-red-400";
 
 export default function LeadCaptureForm() {
